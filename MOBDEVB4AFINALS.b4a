@@ -1,0 +1,238 @@
+﻿Build1=Default,b4a.example
+File1=CookwareBundle.jpg
+File10=FoodStorage2.jpg
+File11=FoodStorage3.jpg
+File12=FoodStorage4.jpg
+File13=FoodStorage5.jpg
+File14=FoodStorage6.jpg
+File15=FoodStorageandContainersBundle.jpg
+File16=HouseKeepingSupplies1.jpg
+File17=HouseKeepingSupplies2.jpg
+File18=HouseKeepingSupplies3.jpg
+File19=HouseKeepingSupplies4.jpg
+File2=DinnerwareAndFlatwaresBundle.jpg
+File20=HouseKeepingSupplies5.jpg
+File21=HouseKeepingSupplies6.jpg
+File22=HousekeepingSuppliesBundle.jpg
+File23=ImageCookware1.jpg
+File24=ImageCookware2.jpg
+File25=ImageCookware3.jpg
+File26=ImageCookware4.jpg
+File27=ImageCookware5.jpg
+File28=ImageCookware6.jpg
+File29=KitchenTools1.jpg
+File3=DinnerwareProduct1.jpg
+File30=KitchenTools2.jpg
+File31=KitchenTools3.jpg
+File32=KitchenTools4.jpg
+File33=KitchenTools5.jpg
+File34=KitchenTools6.jpg
+File35=KitchenToolsAndGadgetsBundle.jpg
+File36=Layout.bal
+File37=LayoutCookware.bal
+File38=LayoutCustomListviewListingContent.bal
+File39=LayoutCustomListViewShoppingCartContent.bal
+File4=DinnerwareProduct2.jpg
+File40=layoutdinnerware.bal
+File41=layoutfoodstorage.bal
+File42=LayoutForgetPassword.bal
+File43=LayoutHorizontalScrollViewCookware.bal
+File44=layouthousekeeping.bal
+File45=LayoutKitchenTools.bal
+File46=LayoutListing.bal
+File47=LayoutLogin.bal
+File48=LayoutProductDescription.bal
+File49=LayoutRegister.bal
+File5=DinnerwareProduct3.jpg
+File50=LayoutScrollViewMain.bal
+File51=LayoutScrollViewProductDescription.bal
+File52=LayoutShoppingCart.bal
+File53=LogoNeedGear.png
+File54=needgear.db
+File6=DinnerwareProduct4.jpg
+File7=DinnerwareProduct5.jpg
+File8=DinnerwareProduct6.jpg
+File9=FoodStorage1.jpg
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup17=Default Group
+FileGroup18=Default Group
+FileGroup19=Default Group
+FileGroup2=Default Group
+FileGroup20=Default Group
+FileGroup21=Default Group
+FileGroup22=Default Group
+FileGroup23=Default Group
+FileGroup24=Default Group
+FileGroup25=Default Group
+FileGroup26=Default Group
+FileGroup27=Default Group
+FileGroup28=Default Group
+FileGroup29=Default Group
+FileGroup3=Default Group
+FileGroup30=Default Group
+FileGroup31=Default Group
+FileGroup32=Default Group
+FileGroup33=Default Group
+FileGroup34=Default Group
+FileGroup35=Default Group
+FileGroup36=Default Group
+FileGroup37=Default Group
+FileGroup38=Default Group
+FileGroup39=Default Group
+FileGroup4=Default Group
+FileGroup40=Default Group
+FileGroup41=Default Group
+FileGroup42=Default Group
+FileGroup43=Default Group
+FileGroup44=Default Group
+FileGroup45=Default Group
+FileGroup46=Default Group
+FileGroup47=Default Group
+FileGroup48=Default Group
+FileGroup49=Default Group
+FileGroup5=Default Group
+FileGroup50=Default Group
+FileGroup51=Default Group
+FileGroup52=Default Group
+FileGroup53=Default Group
+FileGroup54=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=core
+Library2=dialogs
+Library3=sql
+Library4=xcustomlistview
+Library5=xui
+Library6=xui views
+Library7=b4xtable
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=CookwareCategory
+Module10=Register
+Module11=ShoppingCart
+Module12=Starter
+Module2=DinnerwareCategory
+Module3=FoodStorageCategory
+Module4=HouseKeepingCategory
+Module5=KitchenToolsCategory
+Module6=Listing
+Module7=Login
+Module8=ProductDescription
+Module9=ProductInfo
+NumberOfFiles=54
+NumberOfLibraries=7
+NumberOfModules=12
+Version=12.8
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: false
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private ScrollViewMain As ScrollView
+	Private PanelBurgerContent As Panel
+	Private PanelSubCategories As Panel
+	Private LabelBurger As Label
+	Private LabelBurgerShoppingCart1 As Label
+	Private LabelBurgerShoppingCart2 As Label
+	Private PanelScrollViewMainPanel As Panel
+	Private LabelCategoriesIcon As Label
+	Private PanelCategories As Panel
+	
+	Private PanelHouseKepping As Panel
+	Private PanelDinnerware As Panel
+	Private PanelFoodStorage As Panel
+	Private PanelCookware As Panel
+	Private PanelKitchenTools As Panel
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Layout")
+	
+	ScrollViewMain.Panel.LoadLayout("LayoutScrollViewMain")
+	ScrollViewMain.Panel.Height = PanelScrollViewMainPanel.Height
+	
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub Button1_Click
+	xui.MsgboxAsync("Hello world!", "B4X")
+End Sub
+
+Private Sub LabelBurger_Click
+	If PanelBurgerContent.Visible = False Then
+		PanelBurgerContent.Visible = True
+		LabelBurger.Text = Chr(0xF00D)
+		Else
+			PanelBurgerContent.Visible = False
+			LabelBurger.Text = Chr(0xF0C9)
+	End If
+End Sub
+
+Private Sub PanelCategories_Click
+	If PanelSubCategories.Visible = False Then
+		PanelSubCategories.Visible = True
+		LabelBurgerShoppingCart1.Visible = False
+		LabelBurgerShoppingCart2.Visible = True
+		LabelCategoriesIcon.Text = Chr(0xF107)
+	Else
+		PanelSubCategories.Visible = False
+		LabelBurgerShoppingCart1.Visible = True
+		LabelBurgerShoppingCart2.Visible = False
+		LabelCategoriesIcon.Text = Chr(0xF106)
+	End If
+End Sub
+
+Private Sub PanelKitchenTools_Click
+	StartActivity("KitchenToolsCategory")
+End Sub
+
+Private Sub PanelCookware_Click
+	StartActivity("CookwareCategory")
+End Sub
+
+Private Sub PanelFoodStorage_Click
+	StartActivity("FoodStorageCategory")
+End Sub
+
+Private Sub PanelDinnerware_Click
+	StartActivity("DinnerwareCategory")
+End Sub
+
+Private Sub PanelHouseKepping_Click
+	StartActivity("HouseKeepingCategory")
+End Sub
